@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,14 @@
 		9738DBA92614CB4C00F2F3B4 /* PresentableAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBA82614CB4C00F2F3B4 /* PresentableAnswer.swift */; };
 		9738DBAD2614CB7E00F2F3B4 /* CorrectAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBAC2614CB7E00F2F3B4 /* CorrectAnswerCell.swift */; };
 		9738DBB12614CB9D00F2F3B4 /* WrongAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBB02614CB9D00F2F3B4 /* WrongAnswerCell.swift */; };
+		9738DBCC2615F33B00F2F3B4 /* QuizEngine in Frameworks */ = {isa = PBXBuildFile; productRef = 9738DBCB2615F33B00F2F3B4 /* QuizEngine */; };
+		9738DBD02615F56900F2F3B4 /* NavigationControllerRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBCF2615F56900F2F3B4 /* NavigationControllerRouterTests.swift */; };
+		9738DBD42615F60A00F2F3B4 /* NavigationControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBD32615F60A00F2F3B4 /* NavigationControllerRouter.swift */; };
+		9738DBD82616027F00F2F3B4 /* QuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBD72616027F00F2F3B4 /* QuestionTests.swift */; };
+		9738DBDC261605D400F2F3B4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBDB261605D400F2F3B4 /* Question.swift */; };
+		9738DBE0261611C100F2F3B4 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBDF261611C100F2F3B4 /* ViewControllerFactory.swift */; };
+		9738DBE42616121100F2F3B4 /* iOSViewControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBE32616121100F2F3B4 /* iOSViewControllerFactoryTests.swift */; };
+		9738DBE8261612C500F2F3B4 /* iOSViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBE7261612C500F2F3B4 /* iOSViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +66,13 @@
 		9738DBA82614CB4C00F2F3B4 /* PresentableAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableAnswer.swift; sourceTree = "<group>"; };
 		9738DBAC2614CB7E00F2F3B4 /* CorrectAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorrectAnswerCell.swift; sourceTree = "<group>"; };
 		9738DBB02614CB9D00F2F3B4 /* WrongAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerCell.swift; sourceTree = "<group>"; };
+		9738DBCF2615F56900F2F3B4 /* NavigationControllerRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouterTests.swift; sourceTree = "<group>"; };
+		9738DBD32615F60A00F2F3B4 /* NavigationControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerRouter.swift; sourceTree = "<group>"; };
+		9738DBD72616027F00F2F3B4 /* QuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTests.swift; sourceTree = "<group>"; };
+		9738DBDB261605D400F2F3B4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		9738DBDF261611C100F2F3B4 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		9738DBE32616121100F2F3B4 /* iOSViewControllerFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactoryTests.swift; sourceTree = "<group>"; };
+		9738DBE7261612C500F2F3B4 /* iOSViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9738DBCC2615F33B00F2F3B4 /* QuizEngine in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +129,11 @@
 				9738DBB02614CB9D00F2F3B4 /* WrongAnswerCell.swift */,
 				9738DBA02614C6A100F2F3B4 /* WrongAnswerCell.xib */,
 				9738DBA42614CB2300F2F3B4 /* UITableViewExtensions.swift */,
+				9738DBE7261612C500F2F3B4 /* iOSViewControllerFactory.swift */,
 				9738DBA82614CB4C00F2F3B4 /* PresentableAnswer.swift */,
+				9738DBD32615F60A00F2F3B4 /* NavigationControllerRouter.swift */,
+				9738DBDB261605D400F2F3B4 /* Question.swift */,
+				9738DBDF261611C100F2F3B4 /* ViewControllerFactory.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -125,6 +145,9 @@
 				9738DB8C2614B98D00F2F3B4 /* ResultsViewControllerTests.swift */,
 				9738DB7E26149F0400F2F3B4 /* QuestionViewControllerTests.swift */,
 				9738DB982614BFB100F2F3B4 /* TableViewHelpers.swift */,
+				9738DBCF2615F56900F2F3B4 /* NavigationControllerRouterTests.swift */,
+				9738DBD72616027F00F2F3B4 /* QuestionTests.swift */,
+				9738DBE32616121100F2F3B4 /* iOSViewControllerFactoryTests.swift */,
 			);
 			path = QuizAppTests;
 			sourceTree = "<group>";
@@ -145,6 +168,9 @@
 			dependencies = (
 			);
 			name = QuizApp;
+			packageProductDependencies = (
+				9738DBCB2615F33B00F2F3B4 /* QuizEngine */,
+			);
 			productName = QuizApp;
 			productReference = 9738DB5426149E2500F2F3B4 /* QuizApp.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 9738DB4B26149E2500F2F3B4;
+			packageReferences = (
+				9738DBCA2615F33B00F2F3B4 /* XCRemoteSwiftPackageReference "QuizEngine" */,
+			);
 			productRefGroup = 9738DB5526149E2500F2F3B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,9 +266,13 @@
 				9738DBAD2614CB7E00F2F3B4 /* CorrectAnswerCell.swift in Sources */,
 				9738DB5A26149E2500F2F3B4 /* SceneDelegate.swift in Sources */,
 				9738DBA92614CB4C00F2F3B4 /* PresentableAnswer.swift in Sources */,
+				9738DBDC261605D400F2F3B4 /* Question.swift in Sources */,
 				9738DBB12614CB9D00F2F3B4 /* WrongAnswerCell.swift in Sources */,
+				9738DBE8261612C500F2F3B4 /* iOSViewControllerFactory.swift in Sources */,
+				9738DBD42615F60A00F2F3B4 /* NavigationControllerRouter.swift in Sources */,
 				9738DB8326149F8000F2F3B4 /* QuestionViewController.swift in Sources */,
 				9738DB912614BA0B00F2F3B4 /* ResultsViewController.swift in Sources */,
+				9738DBE0261611C100F2F3B4 /* ViewControllerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +280,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9738DBD82616027F00F2F3B4 /* QuestionTests.swift in Sources */,
+				9738DBD02615F56900F2F3B4 /* NavigationControllerRouterTests.swift in Sources */,
 				9738DB8D2614B98D00F2F3B4 /* ResultsViewControllerTests.swift in Sources */,
+				9738DBE42616121100F2F3B4 /* iOSViewControllerFactoryTests.swift in Sources */,
 				9738DB992614BFB100F2F3B4 /* TableViewHelpers.swift in Sources */,
 				9738DB7F26149F0400F2F3B4 /* QuestionViewControllerTests.swift in Sources */,
 			);
@@ -500,6 +536,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9738DBCA2615F33B00F2F3B4 /* XCRemoteSwiftPackageReference "QuizEngine" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dh85/QuizEngine";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9738DBCB2615F33B00F2F3B4 /* QuizEngine */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9738DBCA2615F33B00F2F3B4 /* XCRemoteSwiftPackageReference "QuizEngine" */;
+			productName = QuizEngine;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9738DB4C26149E2500F2F3B4 /* Project object */;
 }
