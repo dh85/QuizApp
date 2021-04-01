@@ -19,13 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        let questionViewController = QuestionViewController(question: "A question", options: ["Option 1", "Option 2"]) { result in
-            print(result)
-        }
-        _ = questionViewController.view
-        questionViewController.tableView.allowsMultipleSelection = false
+        let resultsViewController = ResultsViewController(summary: "You got 1/2 correct", answers: [
+            .init(question: "Question??", answer: "Yeah!", wrongAnswer: nil),
+            .init(question: "Another Question??", answer: "Hell Yeah!", wrongAnswer: "Hell no!")
+        ])
+//        let questionViewController = QuestionViewController(question: "A question", options: ["Option 1", "Option 2"]) { result in
+//            print(result)
+//        }
+//        _ = questionViewController.view
+//        questionViewController.tableView.allowsMultipleSelection = false
 
-        window.rootViewController = questionViewController
+        window.rootViewController = resultsViewController
         self.window = window
         window.makeKeyAndVisible()
     }
