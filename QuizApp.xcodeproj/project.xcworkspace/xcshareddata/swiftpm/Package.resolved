@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "QuizEngine",
+        "repositoryURL": "https://github.com/dh85/QuizEngine",
+        "state": {
+          "branch": null,
+          "revision": "97a035d3e9728874f0a3a0f542066bab0d69421d",
+          "version": "0.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
