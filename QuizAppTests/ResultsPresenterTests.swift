@@ -14,6 +14,14 @@ class ResultsPresenterTests: XCTestCase {
     let singleAnswerQuestion = Question.singleAnswer("Q1")
     let multipleAnswerQuestion = Question.multipleAnswer("Q2")
 
+    func test_title_returnsFormattedTitle() {
+        let result: GameResult<Question<String>, [String]> = .make()
+
+        let sut = ResultsPresenter(result: result, questions: [], correctAnswers: [:])
+
+        XCTAssertEqual(sut.title, "Result")
+    }
+
     func test_summary_withTwoQuestionAndScoresOne_returnsSummary() {
         let answers = [singleAnswerQuestion: ["A1"], multipleAnswerQuestion: ["A2", "A3"]]
         let orderedQuestions = [singleAnswerQuestion, multipleAnswerQuestion]
