@@ -8,15 +8,19 @@
 import Foundation
 @testable import QuizEngine
 
-extension GameResult: Hashable {
-    public static func == (lhs: GameResult<Question, Answer>, rhs: GameResult<Question, Answer>) -> Bool {
-        lhs.score == rhs.score
-    }
-
+extension GameResult {
     static func make(answers: [Question: Answer] = [:], score: Int = 0) -> GameResult<Question, Answer> {
         GameResult(answers: answers, score: score)
     }
+}
 
+extension GameResult: Equatable where Answer: Equatable {
+    public static func == (lhs: GameResult<Question, Answer>, rhs: GameResult<Question, Answer>) -> Bool {
+        lhs.score == rhs.score && lhs.answers == rhs.answers
+    }
+}
+
+extension GameResult: Hashable where Answer: Equatable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(1)
     }
