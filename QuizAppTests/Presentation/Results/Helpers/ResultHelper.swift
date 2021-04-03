@@ -20,8 +20,9 @@ extension GameResult: Equatable where Answer: Equatable {
     }
 }
 
-extension GameResult: Hashable where Answer: Equatable {
+extension GameResult: Hashable where Answer: Hashable {
     public func hash(into hasher: inout Hasher) {
-        hasher.combine(1)
+        hasher.combine(answers)
+        hasher.combine(score)
     }
 }
