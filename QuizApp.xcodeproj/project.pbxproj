@@ -121,26 +121,10 @@
 		9738DB5626149E2500F2F3B4 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				9738DB5726149E2500F2F3B4 /* AppDelegate.swift */,
-				9738DB5926149E2500F2F3B4 /* SceneDelegate.swift */,
-				9738DB6026149E2600F2F3B4 /* Assets.xcassets */,
-				9738DB6226149E2600F2F3B4 /* LaunchScreen.storyboard */,
-				9738DB6526149E2600F2F3B4 /* Info.plist */,
-				9738DB8226149F8000F2F3B4 /* QuestionViewController.swift */,
-				9738DB8626149FFE00F2F3B4 /* QuestionViewController.xib */,
-				9738DB902614BA0B00F2F3B4 /* ResultsViewController.swift */,
-				9738DB942614BA6700F2F3B4 /* ResultsViewController.xib */,
-				9738DBAC2614CB7E00F2F3B4 /* CorrectAnswerCell.swift */,
-				9738DB9C2614C2D300F2F3B4 /* CorrectAnswerCell.xib */,
-				9738DBB02614CB9D00F2F3B4 /* WrongAnswerCell.swift */,
-				9738DBA02614C6A100F2F3B4 /* WrongAnswerCell.xib */,
-				9738DBA42614CB2300F2F3B4 /* UITableViewExtensions.swift */,
-				9738DBE7261612C500F2F3B4 /* iOSViewControllerFactory.swift */,
-				9738DBFB26175E0100F2F3B4 /* QuestionPresenter.swift */,
-				9738DBA82614CB4C00F2F3B4 /* PresentableAnswer.swift */,
-				9738DBF32616238300F2F3B4 /* ResultsPresenter.swift */,
-				9738DBD32615F60A00F2F3B4 /* NavigationControllerRouter.swift */,
-				9738DBDF261611C100F2F3B4 /* ViewControllerFactory.swift */,
+				97BEECC92618672800B26FF7 /* Main */,
+				975F45C42618696000BC5A23 /* Presentation */,
+				975F45CB261869D800BC5A23 /* Routing */,
+				975F45BE2618689300BC5A23 /* UI */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -148,17 +132,201 @@
 		9738DB7326149ED600F2F3B4 /* QuizAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				9738DB7626149ED600F2F3B4 /* Info.plist */,
-				9738DB8C2614B98D00F2F3B4 /* ResultsViewControllerTests.swift */,
-				9738DB7E26149F0400F2F3B4 /* QuestionViewControllerTests.swift */,
-				9738DB982614BFB100F2F3B4 /* TableViewHelpers.swift */,
-				9738DBCF2615F56900F2F3B4 /* NavigationControllerRouterTests.swift */,
-				9738DBE32616121100F2F3B4 /* iOSViewControllerFactoryTests.swift */,
-				9738DBEB2616217200F2F3B4 /* ResultsPresenterTests.swift */,
-				9738DBEF261621F000F2F3B4 /* ResultHelper.swift */,
-				9738DBF726175D8300F2F3B4 /* QuestionPresenterTests.swift */,
+				975F45D026186A4200BC5A23 /* Main */,
+				975F45D526186AC700BC5A23 /* Presentation */,
+				975F45D926186B0600BC5A23 /* Routing */,
+				975F45D126186A7600BC5A23 /* UI */,
 			);
 			path = QuizAppTests;
+			sourceTree = "<group>";
+		};
+		975F45BE2618689300BC5A23 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				975F45C22618692300BC5A23 /* Helpers */,
+				975F45C32618693900BC5A23 /* Launch */,
+				975F45BF261868C400BC5A23 /* Questions */,
+				975F45C0261868CF00BC5A23 /* Results */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		975F45BF261868C400BC5A23 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				9738DB8226149F8000F2F3B4 /* QuestionViewController.swift */,
+				9738DB8626149FFE00F2F3B4 /* QuestionViewController.xib */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		975F45C0261868CF00BC5A23 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				975F45C1261868FF00BC5A23 /* Cells */,
+				9738DB902614BA0B00F2F3B4 /* ResultsViewController.swift */,
+				9738DB942614BA6700F2F3B4 /* ResultsViewController.xib */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		975F45C1261868FF00BC5A23 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9738DBAC2614CB7E00F2F3B4 /* CorrectAnswerCell.swift */,
+				9738DB9C2614C2D300F2F3B4 /* CorrectAnswerCell.xib */,
+				9738DBB02614CB9D00F2F3B4 /* WrongAnswerCell.swift */,
+				9738DBA02614C6A100F2F3B4 /* WrongAnswerCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		975F45C22618692300BC5A23 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9738DBA42614CB2300F2F3B4 /* UITableViewExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		975F45C32618693900BC5A23 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				9738DB6226149E2600F2F3B4 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		975F45C42618696000BC5A23 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				975F45C5261869A100BC5A23 /* Questions */,
+				975F45CA261869B000BC5A23 /* Results */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		975F45C5261869A100BC5A23 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				9738DBFB26175E0100F2F3B4 /* QuestionPresenter.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		975F45CA261869B000BC5A23 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				9738DBA82614CB4C00F2F3B4 /* PresentableAnswer.swift */,
+				9738DBF32616238300F2F3B4 /* ResultsPresenter.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		975F45CB261869D800BC5A23 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				9738DBD32615F60A00F2F3B4 /* NavigationControllerRouter.swift */,
+				9738DBDF261611C100F2F3B4 /* ViewControllerFactory.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		975F45D026186A4200BC5A23 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9738DB7626149ED600F2F3B4 /* Info.plist */,
+				9738DBE32616121100F2F3B4 /* iOSViewControllerFactoryTests.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		975F45D126186A7600BC5A23 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				975F45D426186A8F00BC5A23 /* Helpers */,
+				975F45D326186A8900BC5A23 /* Questions */,
+				975F45D226186A8200BC5A23 /* Results */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		975F45D226186A8200BC5A23 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				9738DB8C2614B98D00F2F3B4 /* ResultsViewControllerTests.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		975F45D326186A8900BC5A23 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				9738DB7E26149F0400F2F3B4 /* QuestionViewControllerTests.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		975F45D426186A8F00BC5A23 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9738DB982614BFB100F2F3B4 /* TableViewHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		975F45D526186AC700BC5A23 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				975F45D726186AD600BC5A23 /* Questions */,
+				975F45D626186AD000BC5A23 /* Results */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		975F45D626186AD000BC5A23 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				975F45D826186AEF00BC5A23 /* Helpers */,
+				9738DBEB2616217200F2F3B4 /* ResultsPresenterTests.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		975F45D726186AD600BC5A23 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				9738DBF726175D8300F2F3B4 /* QuestionPresenterTests.swift */,
+			);
+			path = Questions;
+			sourceTree = "<group>";
+		};
+		975F45D826186AEF00BC5A23 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9738DBEF261621F000F2F3B4 /* ResultHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		975F45D926186B0600BC5A23 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				9738DBCF2615F56900F2F3B4 /* NavigationControllerRouterTests.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		97BEECC92618672800B26FF7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9738DB6526149E2600F2F3B4 /* Info.plist */,
+				9738DB5726149E2500F2F3B4 /* AppDelegate.swift */,
+				9738DB5926149E2500F2F3B4 /* SceneDelegate.swift */,
+				9738DBE7261612C500F2F3B4 /* iOSViewControllerFactory.swift */,
+				9738DB6026149E2600F2F3B4 /* Assets.xcassets */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +614,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 548X9JAQV4;
-				INFOPLIST_FILE = QuizApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/QuizApp/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +633,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 548X9JAQV4;
-				INFOPLIST_FILE = QuizApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/QuizApp/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,7 +651,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 548X9JAQV4;
-				INFOPLIST_FILE = QuizAppTests/Info.plist;
+				INFOPLIST_FILE = QuizAppTests/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,7 +671,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 548X9JAQV4;
-				INFOPLIST_FILE = QuizAppTests/Info.plist;
+				INFOPLIST_FILE = QuizAppTests/Main/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
