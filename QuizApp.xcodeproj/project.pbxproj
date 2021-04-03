@@ -35,6 +35,8 @@
 		9738DBF42616238300F2F3B4 /* ResultsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBF32616238300F2F3B4 /* ResultsPresenter.swift */; };
 		9738DBF826175D8300F2F3B4 /* QuestionPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBF726175D8300F2F3B4 /* QuestionPresenterTests.swift */; };
 		9738DBFC26175E0100F2F3B4 /* QuestionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738DBFB26175E0100F2F3B4 /* QuestionPresenter.swift */; };
+		978F6F712618C124009AB733 /* BasicScoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F6F702618C124009AB733 /* BasicScoreTests.swift */; };
+		978F6F782618C18A009AB733 /* BasicScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978F6F772618C18A009AB733 /* BasicScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		9738DBF32616238300F2F3B4 /* ResultsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPresenter.swift; sourceTree = "<group>"; };
 		9738DBF726175D8300F2F3B4 /* QuestionPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenterTests.swift; sourceTree = "<group>"; };
 		9738DBFB26175E0100F2F3B4 /* QuestionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionPresenter.swift; sourceTree = "<group>"; };
+		978F6F702618C124009AB733 /* BasicScoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScoreTests.swift; sourceTree = "<group>"; };
+		978F6F772618C18A009AB733 /* BasicScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 				97BEECC92618672800B26FF7 /* Main */,
 				975F45C42618696000BC5A23 /* Presentation */,
 				975F45CB261869D800BC5A23 /* Routing */,
+				978F6F762618C177009AB733 /* Scoring */,
 				975F45BE2618689300BC5A23 /* UI */,
 			);
 			path = QuizApp;
@@ -135,6 +140,7 @@
 				975F45D026186A4200BC5A23 /* Main */,
 				975F45D526186AC700BC5A23 /* Presentation */,
 				975F45D926186B0600BC5A23 /* Routing */,
+				978F6F6F2618C110009AB733 /* Scoring */,
 				975F45D126186A7600BC5A23 /* UI */,
 			);
 			path = QuizAppTests;
@@ -317,6 +323,22 @@
 			path = Routing;
 			sourceTree = "<group>";
 		};
+		978F6F6F2618C110009AB733 /* Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				978F6F702618C124009AB733 /* BasicScoreTests.swift */,
+			);
+			path = Scoring;
+			sourceTree = "<group>";
+		};
+		978F6F762618C177009AB733 /* Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				978F6F772618C18A009AB733 /* BasicScore.swift */,
+			);
+			path = Scoring;
+			sourceTree = "<group>";
+		};
 		97BEECC92618672800B26FF7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9738DBA52614CB2300F2F3B4 /* UITableViewExtensions.swift in Sources */,
+				978F6F782618C18A009AB733 /* BasicScore.swift in Sources */,
 				9738DB5826149E2500F2F3B4 /* AppDelegate.swift in Sources */,
 				9738DBF42616238300F2F3B4 /* ResultsPresenter.swift in Sources */,
 				9738DBAD2614CB7E00F2F3B4 /* CorrectAnswerCell.swift in Sources */,
@@ -461,6 +484,7 @@
 				9738DBD02615F56900F2F3B4 /* NavigationControllerRouterTests.swift in Sources */,
 				9738DB8D2614B98D00F2F3B4 /* ResultsViewControllerTests.swift in Sources */,
 				9738DBE42616121100F2F3B4 /* iOSViewControllerFactoryTests.swift in Sources */,
+				978F6F712618C124009AB733 /* BasicScoreTests.swift in Sources */,
 				9738DBF826175D8300F2F3B4 /* QuestionPresenterTests.swift in Sources */,
 				9738DBF0261621F000F2F3B4 /* ResultHelper.swift in Sources */,
 				9738DB992614BFB100F2F3B4 /* TableViewHelpers.swift in Sources */,
