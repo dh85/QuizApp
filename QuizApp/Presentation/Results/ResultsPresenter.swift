@@ -8,26 +8,45 @@
 import Foundation
 import QuizEngine
 
-struct ResultsPresenter {
-    let result: GameResult<Question<String>, [String]>
-    let questions: [Question<String>]
-    let correctAnswers: [Question<String>: [String]]
+final class ResultsPresenter {
+    typealias Answers = [(question: Question<String>, answers: [String])]
+    typealias Scorer = ([[String]], [[String]]) -> Int
+
+    private let userAnswers: Answers
+    private let correctAnswers: Answers
+    private let scorer: Scorer
+
+    init(userAnswers: Answers, correctAnswers: Answers, scorer: @escaping Scorer) {
+        self.userAnswers = userAnswers
+        self.correctAnswers = correctAnswers
+        self.scorer = scorer
+    }
+
+    init(result: GameResult<Question<String>, [String]>, questions: [Question<String>], correctAnswers: [Question<String>: [String]]) {
+        self.userAnswers = questions.map { question in
+            (question, result.answers[question]!)
+        }
+        self.correctAnswers = questions.map { question in
+            (question, correctAnswers[question]!)
+        }
+        self.scorer = { _, _ in result.score }
+    }
 
     var title: String {
         "Result"
     }
 
     var summary: String {
-        "You got \(result.score)/\(result.answers.count) correct"
+        "You got \(score)/\(userAnswers.count) correct"
+    }
+
+    private var score: Int {
+        scorer(userAnswers.map { $0.answers }, correctAnswers.map { $0.answers })
     }
 
     var presentableAnswers: [PresentableAnswer] {
-        questions.map { question in
-            guard let userAnswer = result.answers[question], let correctAnswer = correctAnswers[question] else {
-                fatalError("Couldn't find correct answer for question: \(question)")
-            }
-
-            return presentableAnswer(question, userAnswer, correctAnswer)
+        zip(userAnswers, correctAnswers).map { userAnswer, correctAnswer in
+            presentableAnswer(userAnswer.question, userAnswer.answers, correctAnswer.answers)
         }
     }
 
