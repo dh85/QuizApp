@@ -38,6 +38,17 @@ class iOSViewControllerFactory: ViewControllerFactory {
         return questionViewController(for: question, options: options, answerCallback: answerCallback)
     }
 
+    func resultsViewController(for userAnswers: Answers) -> UIViewController {
+        let presenter = ResultsPresenter(
+            userAnswers: userAnswers,
+            correctAnswers: correctAnswers(),
+            scorer: BasicScore.score
+        )
+        let controller = ResultsViewController(summary: presenter.summary, answers: presenter.presentableAnswers)
+        controller.title = presenter.title
+        return controller
+    }
+
     func resultsViewController(for result: GameResult<Question<String>, [String]>) -> UIViewController {
         let presenter = ResultsPresenter(userAnswers: questions.map { question in
             (question, result.answers[question]!)
