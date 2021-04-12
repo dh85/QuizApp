@@ -12,16 +12,6 @@ import XCTest
 
 class NavigationControllerRouterTests: XCTestCase {
 
-    let navigationController = NonAnimatedNavigationController()
-    let factory = ViewControllerFactoryStub()
-    let singleAnswerQuestion = Question.singleAnswer("Q1")
-    let singleAnswerQuestion2 = Question.singleAnswer("Q2")
-    let multipleAnswerQuestion = Question.multipleAnswer("Q1")
-
-    lazy var sut: NavigationControllerRouter = {
-        NavigationControllerRouter(navigationController, factory: factory)
-    }()
-
     func test_answerForQuestion_showsQuestionController() {
         let viewController = UIViewController()
         let secondViewController = UIViewController()
@@ -119,13 +109,23 @@ class NavigationControllerRouterTests: XCTestCase {
 
     // MARK: Helpers
 
-    class NonAnimatedNavigationController: UINavigationController {
+    private let navigationController = NonAnimatedNavigationController()
+    private let factory = ViewControllerFactoryStub()
+    private let singleAnswerQuestion = Question.singleAnswer("Q1")
+    private let singleAnswerQuestion2 = Question.singleAnswer("Q2")
+    private let multipleAnswerQuestion = Question.multipleAnswer("Q1")
+
+    private lazy var sut: NavigationControllerRouter = {
+        NavigationControllerRouter(navigationController, factory: factory)
+    }()
+
+    private class NonAnimatedNavigationController: UINavigationController {
         override func pushViewController(_ viewController: UIViewController, animated: Bool) {
             super.pushViewController(viewController, animated: false)
         }
     }
 
-    class ViewControllerFactoryStub: ViewControllerFactory {
+    private class ViewControllerFactoryStub: ViewControllerFactory {
         private var stubbedQuestions = [Question<String>: UIViewController]()
         private var stubbedResults = [[Question<String>]: UIViewController]()
         var answerCallback = [Question<String>: ([String]) -> Void]()
