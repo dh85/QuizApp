@@ -42,15 +42,6 @@ final class iOSViewControllerFactory: ViewControllerFactory {
         return controller
     }
 
-    func resultsViewController(for result: GameResult<Question<String>, [String]>) -> UIViewController {
-        let presenter = ResultsPresenter(userAnswers: questions.map { question in
-            (question, result.answers[question]!)
-        }, correctAnswers: correctAnswers, scorer: { _, _ in result.score })
-        let controller = ResultsViewController(summary: presenter.summary, answers: presenter.presentableAnswers)
-        controller.title = presenter.title
-        return controller
-    }
-
     private func questionViewController(for question: Question<String>, options: [String], answerCallback: @escaping ([String]) -> Void) -> UIViewController {
         switch question {
         case .singleAnswer(let value):
